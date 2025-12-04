@@ -21,7 +21,10 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
 
+            System.out.println("Do You Want To ADD or SELL? :     ");
             String command = scanner.next() ;
+
+            System.out.println("How many Item You Want to ADD/SELL? :     ");
             int amount = scanner.nextInt() ;
 
             if (command.equals("ADD")) {
