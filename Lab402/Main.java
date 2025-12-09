@@ -12,6 +12,8 @@ public class Main {
 
         scanner.nextLine() ;
 
+        System.out.println("----------------------------------------------");
+
         Product product = null ;
 
         if (mode ==1) {
@@ -30,7 +32,10 @@ public class Main {
             double inputPrice = scanner.nextDouble() ;
 
             product = new Product(inputName, inputPrice) ;
+            
         }
+
+        System.out.println("--------------------result--------------------");
 
         if (product != null) {
 

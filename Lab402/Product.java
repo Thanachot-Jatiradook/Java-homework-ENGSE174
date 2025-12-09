@@ -6,8 +6,7 @@ public class Product {
 
     public Product(String name) {
 
-        this.name = name ;
-        price = 0.0 ;
+        this(name, 0.0);
 
     }
 

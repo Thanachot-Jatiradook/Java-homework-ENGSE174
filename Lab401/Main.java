@@ -13,6 +13,8 @@ public class Main {
 
         scanner.nextLine() ;
 
+        System.out.println("----------------------------------------------");
+
         Book book = null ;
 
         if (mode == 1) {
@@ -34,6 +36,8 @@ public class Main {
             book = new Book(inputTitle, inputAuthor) ;
 
         }
+
+        System.out.println("--------------------result--------------------");
 
         if (book != null) {
 
