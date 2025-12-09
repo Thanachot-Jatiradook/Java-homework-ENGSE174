@@ -17,6 +17,8 @@ public class Main {
 
         Color gay = new Color(inputRed, inputGreen, inputBlue);
 
+        System.out.println("----------result----------");
+
         gay.diaplayRGB();
 
         scanner.close();
