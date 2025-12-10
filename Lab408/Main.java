@@ -4,41 +4,63 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("1, 2 Or 3 : ");
-        int mode = scanner.nextInt();
 
-        scanner.nextLine();
-        Movie movie = null;
+        Scanner scanner = new Scanner(System.in) ;
 
-        if (mode == 1){
-            System.out.println("Enter Your Title : ");
-            String inputTitle = scanner.nextLine();
-            movie = new Movie(inputTitle);
-        }
-        else if (mode == 2){
-            System.out.println("Enter Your Title : ");
-            String inputTitle = scanner.nextLine();
+        System.out.println("1, 2 Or 3 : ") ;
+        int mode = scanner.nextInt() ;
 
-            System.out.println("Enter Your Director : ");
-            String inputDirector = scanner.nextLine();
-            movie = new Movie(inputTitle, inputDirector);
-        }
-        else if (mode == 3){
-            System.out.println("Enter Your Title : ");
-            String inputTitle = scanner.nextLine();
+        System.out.println("--------------------------");
 
-            System.out.println("Enter Your Director : ");
-            String inputDirector = scanner.nextLine();
+        scanner.nextLine() ;
+        Movie movie = null ;
 
-            System.out.println("Enter Your Rating : ");
-            double inputRating = scanner.nextDouble();
-            movie = new Movie(inputTitle, inputDirector, inputRating);
+        if (mode == 1) {
+
+            System.out.println("Enter Your Title : ") ;
+            String inputTitle = scanner.nextLine() ;
+
+            movie = new Movie(inputTitle) ;
+
         }
 
-        if (movie != null){
-            movie.displayDetails();
+        else if (mode == 2) {
+
+            System.out.println("Enter Your Title : ") ;
+            String inputTitle = scanner.nextLine() ;
+
+            System.out.println("Enter Your Director : ") ;
+            String inputDirector = scanner.nextLine() ;
+
+            movie = new Movie(inputTitle, inputDirector) ;
+
         }
-        scanner.close();
+
+        else if (mode == 3) {
+
+            System.out.println("Enter Your Title : ") ;
+            String inputTitle = scanner.nextLine() ;
+
+            System.out.println("Enter Your Director : ") ;
+            String inputDirector = scanner.nextLine() ;
+
+            System.out.println("Enter Your Rating : ") ;
+            double inputRating = scanner.nextDouble() ;
+
+            movie = new Movie(inputTitle, inputDirector, inputRating) ;
+
+        }
+
+        System.out.println("----------result----------");
+
+        if (movie != null) {
+
+            movie.displayDetails() ;
+
+        }
+
+        scanner.close() ;
+
     }
+
 }

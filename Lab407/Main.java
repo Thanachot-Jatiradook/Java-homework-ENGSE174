@@ -3,29 +3,35 @@ package Lab407;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter Your ID 1 : ");
-        String inputId1 = scanner.nextLine();
-        System.out.println("Enter Your ID 2 : ");
-        String inputId2 = scanner.nextLine();
-        System.out.println("Enter Your ID 3 : ");
-        String inputId3 = scanner.nextLine();
+        Scanner scanner = new Scanner(System.in) ;
 
-        Resource r1 = new Resource(inputId1);
-        Resource r2 = new Resource(inputId2);
-        Resource r3 = new Resource(inputId3);
+        System.out.println("Enter Your ID 1 : ") ;
+        String inputId1 = scanner.nextLine() ;
+        System.out.println("Enter Your ID 2 : ") ;
+        String inputId2 = scanner.nextLine() ;
+        System.out.println("Enter Your ID 3 : ") ;
+        String inputId3 = scanner.nextLine() ;
 
-        r1 = null;
-        r2 = null;
+        System.out.println("----------result----------") ;
 
-        System.gc();
+        Resource r1 = new Resource(inputId1) ;
+        Resource r2 = new Resource(inputId2) ;
+        Resource r3 = new Resource(inputId3) ;
 
-        r3 = null;
+        r1 = null ;
+        r2 = null ;
 
-        System.gc();
+        System.gc() ;
 
-        scanner.close();
+        r3 = null ;
+
+        System.gc() ;
+
+        scanner.close() ;
+
     }
+    
 }
