@@ -10,13 +10,13 @@ public class Configuration {
 
         if (fontSize < 10) {
 
-            fontSize = 10 ;
+            this.fontSize = 10 ;
 
         }
 
         else if (fontSize > 20) {
 
-            fontSize = 20 ;
+            this.fontSize = 20 ;
 
         }
 
@@ -35,7 +35,7 @@ public class Configuration {
 
         this.theme = user.theme ;
         this.darkMode = user.darkMode ;
-        this.fontSize = user.fontSize ;
+        this.fontSize = base.fontSize ;
 
     }
 
