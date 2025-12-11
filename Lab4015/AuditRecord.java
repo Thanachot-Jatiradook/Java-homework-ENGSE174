@@ -27,7 +27,6 @@ public class AuditRecord {
 
         this.logMessages = new String[size] ;
 
-
         int start = log.length - size ;
 
         for (int i = 0; i < size; i++) {
@@ -43,7 +42,7 @@ public class AuditRecord {
         if (max > 0) {
 
             maxMessages = max ;
-            System.out.println("Polocy set to " + max) ;
+            System.out.println("Policy set to " + max) ;
 
         }
 
@@ -57,7 +56,7 @@ public class AuditRecord {
 
     public AuditRecord addMessage(String message) {
 
-        if (this.logMessages.length >= maxMessages) {
+        if (this.logMessages.length > maxMessages) {
 
             System.out.println("Log is full") ;
 

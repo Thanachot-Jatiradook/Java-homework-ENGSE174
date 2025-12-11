@@ -8,41 +8,37 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in) ;
 
-        System.out.println("Enter Maximum of Your Policy : ") ;
         int inputMax = scanner.nextInt() ;
 
         AuditRecord.setPolicy(inputMax) ;
 
         scanner.nextLine() ;
 
-        System.out.println("-------------------------") ;
-
-        System.out.println("Enter Your Name : ") ;
         String inputName = scanner.nextLine() ;
 
         AuditRecord blehrecord = new AuditRecord(inputName) ;
 
-        System.out.println("-------------------------") ;
-
-        System.out.println("Enter Amount Of Your Log Message : ") ;
         int n = scanner.nextInt() ;
 
         scanner.nextLine() ;
 
-        System.out.println("-------------------------") ;
-
         for (int i = 0; i < n; i++) {
 
-            System.out.println("Enter Your Log Messgae : ") ;
             String blehmessage = scanner.nextLine() ;
 
-            blehrecord = blehrecord.addMessage(blehmessage) ;
+            if (blehmessage.equals("SET_POLICY")){
 
-            System.out.println("-------------------------") ;
+                int newPolicy  = scanner.nextInt();
+                scanner.nextLine();
+                AuditRecord.setPolicy(newPolicy);
+            }
+            else {
+                blehrecord = blehrecord.addMessage(blehmessage) ;
+            }
 
         }
 
-        blehrecord.displayLog() ;
+        blehrecord.displayLog();
 
         scanner.close();
 
