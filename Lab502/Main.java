@@ -1,4 +1,4 @@
-package Lab501;
+package Lab502;
 
 import java.util.Scanner;
 
@@ -11,23 +11,23 @@ public class Main {
         System.out.println("Name : ") ;
         String inputName = scanner.nextLine() ;
 
-        System.out.println("--------------------------");
+        System.out.println("--------------------------") ;
 
         System.out.println("Age : ") ;
         int inputAge = scanner.nextInt() ;
 
-        Dog blehDog = new Dog() ;
+        Cat blehCat = new Cat() ;
 
-        blehDog.name = inputName ;
-        blehDog.age = inputAge ;
+        blehCat.name = inputName ;
+        blehCat.age = inputAge ;
 
-        System.out.println("----------result----------");
+        System.out.println("----------result----------") ;
 
-        blehDog.makeSound() ;
+        blehCat.displayInfo() ;
+        blehCat.makeSound() ;
 
-        blehDog.displayInfo() ;
+        scanner.close();
 
-        scanner.close() ;
     }
-
+    
 }
